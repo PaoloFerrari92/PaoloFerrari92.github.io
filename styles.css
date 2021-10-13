@@ -80,7 +80,7 @@ p{
   display: inline-block;
 }
 #header .nav-list ul li{
-  font-size: 1.2rem;
+  font-size: 1.5rem;
 }
 #header .nav-list ul a{
   font-size: 1rem;
@@ -426,10 +426,11 @@ transition: .3s ease box-shadow;
 }
 #contact .contact-info h2{
   text-align: center;
-  font-size: 1.3rem;
+  font-size: 1rem;
   line-height: 2rem;
   font-weight: 500;
 }
+
 /* End Contact section */
 /* footer */
 #footer {
@@ -472,8 +473,8 @@ transition: .3s ease box-shadow;
 /* End footer */
 /* End for Tablet */
 
-/* Desktop */
-@media only screen and (min-width:961px) {
+/* Tablet */
+@media only screen and (min-width: 401px) and (max-width: 960px) {
 
 #header .nav-list ul{
   position: initial;
@@ -497,10 +498,26 @@ transition: .3s ease box-shadow;
     flex-basis: 22%;
     margin:1.5%;
   }
+  #contact .contact-item{
+  width: 85%;
+}
 }
 /* Desktop */
-@media only screen and (min-width:961px) {
+@media only screen and (min-width: 961px) {
 
+  #header .nav-list ul li{
+    font-size: 2.5rem;
+  }
+  #header .nav-list ul a{
+    font-size: 1.5rem;
+    font-weight: 300;
+    letter-spacing: .1rem;
+    text-decoration: none;
+    color: white;
+    text-transform: uppercase;
+    padding: 10px;
+    display: block;
+  }
 #header .nav-list ul{
   position: initial;
   display: block;
@@ -513,7 +530,7 @@ transition: .3s ease box-shadow;
   display: inline-block;
 }
 #header .nav-list ul li{
-  font-size: 1.8rem;
+  font-size: 3.8rem;
 }
 
 #header .nav-list ul a::after{
@@ -523,5 +540,60 @@ transition: .3s ease box-shadow;
     flex-basis: 22%;
     margin:1.5%;
   }
+  /* Contact section */
+
+
+
+  #contact .contact-item{
+  width: 85%;
+  padding: 20px;
+  text-align: center;
+  border-radius: 10px;
+  padding:30px;
+  margin: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  box-shadow: 0px 0px 30px;
+  transition: .3s ease box-shadow;
+  }
+
+  #contact .contact-item:hover{
+    box-shadow: 0px 0px 5px #0000002c;
+  }
+  #contact .icon{
+    width: 200px;
+    margin: 0 auto;
+    margin-bottom: 10px;
+  }
+  #contact .contact-info h1{
+    font-size: 3.5rem;
+    font-weight: 500;
+    margin-bottom: 5px;
+  }
+  #contact .contact-info h2{
+    text-align: center;
+    font-size: 2rem;
+    line-height: 2rem;
+    font-weight: 500;
+  }
+  #contact-form {
+    width: 85%;
+    padding: 20px;
+    text-align: center;
+    border-radius: 10px;
+    padding:30px;
+    margin: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    box-shadow: 0px 0px 30px;
+    transition: .3s ease box-shadow;
+  }
+
+  }
+  /* End Contact section */
 }
 /* End for Desktop */
