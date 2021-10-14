@@ -4,10 +4,52 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>Paolo Ferrari</title>
-    <link rel="icon" href="/Users/paoloferrari/Documents/PaoloFerrari/paoloferrari92.github.io/img/favicon.ico" type="image/ico"/>
+    <link rel="apple-touch-icon" sizes="57x57" href="img/img/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="img/img/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="img/img/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="img/img/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="img/img/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="img/img/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="img/img/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="img/img/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="img/img/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="img/img/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/img/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="img/img/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/img/favicon-16x16.png">
+    <link rel="manifest" href="img/img/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+
 
     <link rel="stylesheet" href="styles.css"/>
     <meta name="format-detection" content="telephone=no">
+
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+  <script type="text/javascript">
+  (function() {
+  emailjs.init("user_AZVzf1Puc1UoeREpsmB9w");
+  })();
+  emailjs.sendForm('contact_service', 'contact_form', this)
+  </script>
+    <script type="text/javascript">
+        window.onload = function() {
+            document.getElementById('contact-form').addEventListener('submit', function(event) {
+                event.preventDefault();
+                // generate a five digit number for the contact_number variable
+                this.contact_number.value = Math.random() * 100000 | 0;
+                // these IDs from the previous steps
+                emailjs.sendForm('contact_service', 'contact_form', this)
+                    .then(function() {
+                        console.log('SUCCESS!');
+                    }, function(error) {
+                        console.log('FAILED...', error);
+                    });
+            });
+        }
+    </script>
+
 </head>
 
 <body>
@@ -153,17 +195,38 @@ my interests are reading, food and sport.</p>
                </div>
 
             <div class="contact-item">
-              <a href="contact.html">
               <div class="icon"><img src="https://img.icons8.com/bubbles/50/000000/email--v1.png"/>
               <div class="contact-info">
                <h1>Email</h1>
+
+               <form id="contact-form">
+                   <input type="hidden" name="contact_number">
+                   <p>
+
+                   <label>Name</label>
+                   <input type="text" name="user_name" size="10">
+                 </p>
+
+                   <p>
+                   <label>Email</label>
+                   <input type="email" name="user_email"size="10">
+                 </p>
+
+                   <p>
+                   <label>Message</label>
+                   <textarea name="message" cols="10" rows="10"></textarea>
+                 </p>
+
+                   <input type="submit" value="Send" class="cta2" size="10">
+               </form>
+
               </div>
             </div>
         </div>
 
             <div class="contact-item">
               <a href="https://www.google.it/maps/place/Via+Antonio+Salmena,+87016+Morano+Calabro+CS/@39.8414513,16.1316807,642m/data=!3m2!1e3!4b1!4m5!3m4!1s0x133f3fc01841bd77:0xea964f3c2d1aa549!8m2!3d39.8414472!4d16.1338694"
-              target="_blank">Visit'>
+              target="_blank">
               <div class="icon"><img src="https://img.icons8.com/bubbles/50/000000/address.png"/>
                <h1>Adress</h1>
                <h2>Via Antonio Salmena, 15 - 87016 Morano Calabro (CS)</h2>
@@ -182,17 +245,21 @@ my interests are reading, food and sport.</p>
             <h2>If you can dream it, you can do it.</h2>
             <div class="social-icon">
               <div class="social-item">
-                <a href='https://www.facebook.com/paolo.e.ferrari/'>
+
+                <a href='https://www.facebook.com/paolo.e.ferrari/'
+                  target="_blank">
                   <img src="https://img.icons8.com/clouds/100/000000/facebook.png"/></a>
                 </div>
               <div class="social-icon">
                 <div class="social-item">
-                  <a href="https://www.instagram.com/iampaoloferrari/">
+                  <a href="https://www.instagram.com/iampaoloferrari/"
+                    target="_blank">
                     <img src="https://img.icons8.com/clouds/100/000000/instagram-new--v2.png"/></a>
                 </div>
                 <div class="social-icon">
                   <div class="social-item">
-                    <a href='https://www.linkedin.com/in/paoloferrari-/'>
+                    <a href='https://www.linkedin.com/in/paoloferrari-/'
+                      target="_blank">
                       <img src="https://img.icons8.com/clouds/100/000000/linkedin.png"/></a>
                     </div>
                 </div>
